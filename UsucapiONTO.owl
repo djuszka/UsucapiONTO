@@ -1,0 +1,2238 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/UsucapiONTO#"
+     xml:base="http://www.semanticweb.org/ontologies/UsucapiONTO"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:usucapio="http://www.semanticweb.org/ontologies/UsucapiONTO#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO">
+        <rdfs:isDefinedBy xml:lang="pl">Dawid Juszka
+Katedra Filozofii i Etyki Prawniczej
+Wydział Prawa i Administracji
+Uniwersytet Jagielloński</rdfs:isDefinedBy>
+        <owl:title xml:lang="pl">UsucapiONTO</owl:title>
+        <owl:versionInfo xml:lang="pl">1.0</owl:versionInfo>
+        <rdfs:comment xml:lang="pl">Ontologia instytucji nabycia prawa własności przez zasiedzenie w polskim kodeksie cywilnym. Stan prawny: 28 września 2017 roku</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#title -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaNieprzerwaniePrzez -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaNieprzerwaniePrzez">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaPrzez"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaNieprzerwanie"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaPrzerwaniePrzez"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaPrzerwaniePrzez -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaPrzerwaniePrzez">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaPrzez"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaPrzerwanie"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaPrzez -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaPrzez">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiada"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaSamoistniePrzez -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaSamoistniePrzez">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaPrzez"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaSamoistnie"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaZależniePrzez"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaZależniePrzez -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaZależniePrzez">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestPosiadanaPrzez"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaZależnie"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#jestWłasnością -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#jestWłasnością">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestWłaścicielem"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#nieJestWłasnością"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#jestWłaścicielem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#jestWłaścicielem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#nieJestWłaścicielem"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#zasiaduje"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#jestZasiadywana -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#jestZasiadywana">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#zasiaduje"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#maDobrąWiaręWobec -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#maDobrąWiaręWobec">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#maZłąWiaręWobec"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#maZłąWiaręWobec -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#maZłąWiaręWobec">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#nabywaWłasność -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#nabywaWłasność">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#nabywaWłasnośćPrzezZasiedzenie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#nabywaWłasnośćPrzezZasiedzenie">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#nabywaWłasność"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#nieJestWłasnością -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#nieJestWłasnością">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#nieJestWłaścicielem"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#nieJestWłaścicielem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#nieJestWłaścicielem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#posiada -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#posiada">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaNieprzerwanie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaNieprzerwanie">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiada"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaPrzerwanie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaPrzerwanie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaPrzerwanie">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiada"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaPrzezOkres -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaPrzezOkres">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiada"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Posiadacz"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Okres"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaSamoistnie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaSamoistnie">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiada"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaZależnie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaZależnie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaZależnie">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiada"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieNa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieNa">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistny"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Spadkobierca"/>
+        <rdfs:comment xml:lang="pl">Przeniesienie posiadania następuje przez wydanie rzeczy lub dokumentów, które umożliwiają rozporządzanie rzeczą, jak również wydanie środków, które dają faktyczną władzę nad rzeczą.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieSamoistneNa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieSamoistneNa">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieNa"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistny"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieZależneNa"/>
+        <rdfs:comment xml:lang="pl">Przeniesienie posiadania samoistnego może nastąpić tak jak przeniesienie posiadania a także za pomocą umowy między posiadaczem samoistnym a zależnym.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieSamoistneWDobrejWierzeNa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieSamoistneWDobrejWierzeNa">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieSamoistneNa"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#maDobrąWiaręWobec"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieSamoistneWZłejWierzeNa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieSamoistneWZłejWierzeNa">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieSamoistneNa"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#maDobrąWiaręWobec"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#maZłąWiaręWobec"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieZależneNa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieZależneNa">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#przenosiPosiadanieNa"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#przerywaBiegZasiedzenia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#przerywaBiegZasiedzenia">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Właściciel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#włada -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#włada">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#władaWCudzymImieniu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#władaWCudzymImieniu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#włada"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#władaWeWłasnymImieniu"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#władaWeWłasnymImieniu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#władaWeWłasnymImieniu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#włada"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#zasiaduje -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#zasiaduje">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Adres -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Adres">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#DataUrodzenia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#DataUrodzenia">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyFizycznej"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#DrugieImię -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#DrugieImię">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyFizycznej"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Imię -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Imię">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyFizycznej"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NIP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NIP">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyPrawnej"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPrawna"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#UłomnaOsobaPrawna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NazwaPełna -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NazwaPełna">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyPrawnej"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPrawna"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#UłomnaOsobaPrawna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NazwaSkrócona -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NazwaSkrócona">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyPrawnej"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPrawna"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#UłomnaOsobaPrawna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Nazwisko -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Nazwisko">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyFizycznej"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NrDziałki -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NrDziałki">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneNieruchomości"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćGruntowa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NrKsięgiWieczystej -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NrKsięgiWieczystej">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneNieruchomości"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NrObrębu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NrObrębu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneNieruchomości"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćGruntowa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PESEL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PESEL">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyFizycznej"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Płeć -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Płeć">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyFizycznej"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#REGON -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#REGON">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyPrawnej"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPrawna"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#UłomnaOsobaPrawna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Wiek -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Wiek">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyFizycznej"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#daneNieruchomości -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#daneNieruchomości">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyFizycznej -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyFizycznej">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyPrawnej -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyPrawnej">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPrawna"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#UłomnaOsobaPrawna"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#data -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#data">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#jednostkaEwidencyjna -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#jednostkaEwidencyjna">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneNieruchomości"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćGruntowa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#kodPocztowy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#kodPocztowy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Adres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#nazwaGminy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#nazwaGminy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Adres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#nazwaMiejscowości -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#nazwaMiejscowości">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Adres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#nazwaPowiatu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#nazwaPowiatu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Adres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#nazwaUlicy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#nazwaUlicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Adres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#nazwaWojewództwa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#nazwaWojewództwa">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Adres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#nrDomu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#nrDomu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Adres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćBudynkowa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćLokalowa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#nrLokalu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#nrLokalu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Adres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćLokalowa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#nrRachunkuBankowego -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#nrRachunkuBankowego">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyPrawnej"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPrawna"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#UłomnaOsobaPrawna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PKD/EKD -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PKD/EKD">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#daneOsobyPrawnej"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPrawna"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#UłomnaOsobaPrawna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#CudzoziemiecNieOsobaFizyczna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#CudzoziemiecNieOsobaFizyczna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPrawna"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#UłomnaOsobaPrawna"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#CudzoziemiecOsobaFizyczna"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ObywatelRP"/>
+        <rdfs:comment>Cudzoziemcem w rozumieniu ustawy jest:
+2) osoba prawna mająca siedzibę za granicą;
+3) nieposiadająca osobowości prawnej spółka osób wymienionych w pkt 1 lub 2, mająca siedzibę za granicą, utworzona zgodnie z ustawodawstwem państw obcych;
+4) osoba prawna i spółka handlowa nieposiadająca osobowości prawnej mająca siedzibę na terytorium Rzeczypospolitej Polskiej, kontrolowana bezpośrednio lub pośrednio przez osoby lub spółki wymienione w pkt 1, 2 i 3.
+3. W przypadku spółki handlowej za kontrolowaną, w rozumieniu ustawy, uważa się spółkę, w której cudzoziemiec lub cudzoziemcy dysponują bezpośrednio lub pośrednio powyżej 50% głosów na zgromadzeniu wspólników lub na walnym zgromadzeniu, także jako zastawnik, użytkownik lub na podstawie porozumień z innymi osobami, albo mają pozycję dominującą w rozumieniu przepisów art. 4 § 1 pkt 4 lit. b lub c, lub e ustawy z dnia 15 września 2000 r. - Kodeks spółek handlowych (Dz. U. z 2017 r. poz. 1577).
+
+(Art. 1. ust. 2 Ustawa z dnia 24 marca 1920 r. o nabywaniu nieruchomości przez cudzo-ziemców (j.t. Dz.U.2017.2278))</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#CudzoziemiecOsobaFizyczna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#CudzoziemiecOsobaFizyczna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ObywatelRP"/>
+        <rdfs:comment xml:lang="pl">Przepisy o nabywaniu nieruchomości przez cudzoziemców (art. 1 ust. 1 i 4 oraz art. 6 ust. 1) wprowadzają wyłączenie. Obejmuje ono cudzoziemca, który nie uzyskał zezwolenia do nabycia własności nieruchomości położonej w Polsce lub prawa użytkowania wieczystego 
+(Jacek Gudowski (red.), Jolanta Rudnicka, Grzegorz Rudnicki, Stanisław Rudnicki, Komentarz do art.172 Kodeksu cywilnego, Stan prawny: 2016.03.10 (teza 1) porównaj z A. Stelmachowski (w:) System Prawa Prywatnego, t. 3, s. 386)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#CzasZdarzenia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#CzasZdarzenia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Zdarzenie"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#MiejsceZdarzenia"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Okres"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#CzęśćSkładowaRzeczy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#CzęśćSkładowaRzeczy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PochodnaRzeczy"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Pożytek"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Przynależność"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:comment xml:lang="pl">Częścią składową rzeczy jest wszystko co nie może być od niej odłączone bez uszkodzenia lub istotnej zmiany całości albo bez uszkodzenia lub istotnej zmiany przedmiotu odłączonego.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#DobraWiara -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#DobraWiara">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KoncepcjaWiary"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ZłaWiara"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#DochodzeniePrawaWłasności -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#DochodzeniePrawaWłasności">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniaInicjowanePrzezWłaściciela"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Dzierżawca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Dzierżawca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczZależny"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Komodatariusz"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Najemca"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Użytkownik"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Zastawnik"/>
+        <rdfs:comment xml:lang="pl">Dzierżawca to osoba, która na podstawie umowy dzierżawy używa rzeczy i pobiera pożytki na przez czas oznaczony lub nieoznaczony i płaci wydzierżawiającemu czynsz.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Dzierżyciel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Dzierżyciel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#WładającyWCudzymImieniu"/>
+        <rdfs:comment xml:lang="pl">Podmiot, który faktycznie włada rzeczą za kogo innego.
+(na podst. art. 338 k.c.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#GruntRolny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#GruntRolny">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćRolna"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćGruntowa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#InnePowództwoPetytoryjne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#InnePowództwoPetytoryjne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoPetytoryjne"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoNegatoryjne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Kobieta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Kobieta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Mężczyzna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej13Poniżej16RokuŻycia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej13Poniżej16RokuŻycia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Kobieta"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Małoletni"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaOgraniczonaZdolnośćDoCzynnościPrawnych"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻycia"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaRozwiedziona"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaZamężna"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Mężatka"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPoniżej13RokuŻycia"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rozwódka"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻycia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻycia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Kobieta"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPoniżej13RokuŻycia"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaNiezamężna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaRozwiedziona"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaZamężna"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaNiezamężna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaNiezamężna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻycia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Małoletni"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaOgraniczonaZdolnośćDoCzynnościPrawnych"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaRozwiedziona"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaZamężna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaRozwiedziona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaRozwiedziona">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻycia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaRozwiedziona"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaZamężna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaZamężna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaZamężna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻycia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaZamężna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej18RokuŻycia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej18RokuŻycia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Pełnoletni"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaRozwiedziona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaRozwiedziona">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rozwódka"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Kobieta"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Pełnoletni"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaZamężna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaZamężna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaZamężna">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Mężatka"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Kobieta"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Pełnoletni"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Komodatariusz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Komodatariusz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczZależny"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Najemca"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Użytkownik"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Zastawnik"/>
+        <rdfs:comment xml:lang="pl">Komodatariusz to w stosunku prawnym użyczenia osoba biorąca rzecz od użyczającego (komodanta).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#KoncepcjaWiary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KoncepcjaWiary">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#DobraWiara"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZłaWiara"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Kurator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Kurator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzedstawicielUstawowy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#KuratorOsobyPrawnej -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KuratorOsobyPrawnej">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzedstawicielUstawowy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Małoletni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Małoletni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Pełnoletni"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej13Poniżej16RokuŻycia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaNiezamężna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#MężczyznaPowyżej13Poniżej18RokuŻycia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPoniżej13RokuŻycia"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment xml:lang="pl">Osoba fizyczna, która nie jest pełnoletnia.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#MiejsceZdarzenia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#MiejsceZdarzenia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Zdarzenie"/>
+        <rdfs:comment xml:lang="pl">Miejsce zdarzenia w czasoprzestrzeni (za LKIF)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Moment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#CzasZdarzenia"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Okres"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Mężatka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Mężatka">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Kobieta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Mężczyzna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Mężczyzna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#MężczyznaPowyżej13Poniżej18RokuŻycia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#MężczyznaPowyżej13Poniżej18RokuŻycia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Małoletni"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Mężczyzna"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaOgraniczonaZdolnośćDoCzynnościPrawnych"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#MężczyznaPowyżej18RokuŻycia"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPoniżej13RokuŻycia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#MężczyznaPowyżej18RokuŻycia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#MężczyznaPowyżej18RokuŻycia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Mężczyzna"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Pełnoletni"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPoniżej13RokuŻycia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NabyciePrzezZasiedzenie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NabyciePrzezZasiedzenie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NabyciePrzezZasiedzenieWDobrejWierze"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NabyciePrzezZasiedzenieWZłejWierze"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NabyciePrzezZasiedzenieWDobrejWierze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NabyciePrzezZasiedzenieWDobrejWierze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NabyciePrzezZasiedzenie"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NabyciePrzezZasiedzenieWZłejWierze"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NabyciePrzezZasiedzenieWZłejWierze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NabyciePrzezZasiedzenieWZłejWierze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NabyciePrzezZasiedzenie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Najemca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Najemca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczZależny"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Użytkownik"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Zastawnik"/>
+        <rdfs:comment xml:lang="pl">Najemca to osoba, która na podstawie umowy najmu posiada i używa rzeczy zobowiązując się do płacenia czynszu.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Ruchomość"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćBudynkowa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćGruntowa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćLokalowa"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćBudynkowa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćBudynkowa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćGruntowa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćGruntowa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćLokalowa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćLokalowa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćRolna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćRolna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćGruntowa"/>
+        <rdfs:comment>w rozumieniu przepisów ustawy z dnia 11 kwietnia 2003 r. o kształtowaniu ustroju rolnego (Dz.U.2016.2052 j.t.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ObjęcieWPosiadanieSamoistne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ObjęcieWPosiadanieSamoistne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RozpoczęcieBieguZasiedzenia"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnego"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#SamowolneObjęcieWPosiadanieSamoistne"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ObywatelRP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ObywatelRP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Okres -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Okres">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#CzasZdarzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OkresDziałaniaSiłyWyższej -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresDziałaniaSiłyWyższej">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaZawieszeniaBieguZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaKurateli -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaKurateli">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaZawieszeniaBieguZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaMałżeństwa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaMałżeństwa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaZawieszeniaBieguZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaNieważnegoMałżeństwa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaNieważnegoMałżeństwa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaZawieszeniaBieguZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaOpieki -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaOpieki">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaZawieszeniaBieguZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaPosiadaniaSamoistnego -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaPosiadaniaSamoistnego">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Okres"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaPosiadaniaSamoistnegoWDobrejWierze"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaPosiadaniaSamoistnegoWZłejWierze"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaPosiadaniaSamoistnegoWDobrejWierze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaPosiadaniaSamoistnegoWDobrejWierze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaPosiadaniaSamoistnego"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaPosiadaniaSamoistnegoWZłejWierze"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaPosiadaniaSamoistnegoWZłejWierze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaPosiadaniaSamoistnegoWZłejWierze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaPosiadaniaSamoistnego"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaWładzyRodzicielskiej -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaWładzyRodzicielskiej">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaZawieszeniaBieguZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaZawieszeniaBieguZasiedzenia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OkresTrwaniaZawieszeniaBieguZasiedzenia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Okres"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Opiekun -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Opiekun">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzedstawicielUstawowy"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RodzicPosiadającyWładzęRodzicielską"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaBezZdolnościDoCzynnościPrawnych -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaBezZdolnościDoCzynnościPrawnych">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaOgraniczonaZdolnośćDoCzynnościPrawnych"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPełnaZdolnośćDoCzynnościPrawnych"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaCałkowicieUbezwłasnowolniona"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPoniżej13RokuŻycia"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaCałkowicieUbezwłasnowolniona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaCałkowicieUbezwłasnowolniona">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaBezZdolnościDoCzynnościPrawnych"/>
+        <rdfs:comment xml:lang="pl">art. 11 k.c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaCzęściowoUbezwłasnowolniona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaCzęściowoUbezwłasnowolniona">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaOgraniczonaZdolnośćDoCzynnościPrawnych"/>
+        <rdfs:comment xml:lang="pl">art. 15 k.c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#CudzoziemiecOsobaFizyczna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ObywatelRP"/>
+        </owl:disjointUnionOf>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Kobieta"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Mężczyzna"/>
+        </owl:disjointUnionOf>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Małoletni"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Pełnoletni"/>
+        </owl:disjointUnionOf>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaBezZdolnościDoCzynnościPrawnych"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaOgraniczonaZdolnośćDoCzynnościPrawnych"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPełnaZdolnośćDoCzynnościPrawnych"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment>- od urodzenia do chwili śmierci (zgon, uznanie za zmarłego)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaOgraniczonaZdolnośćDoCzynnościPrawnych -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaOgraniczonaZdolnośćDoCzynnościPrawnych">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPełnaZdolnośćDoCzynnościPrawnych"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej13Poniżej16RokuŻycia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#KobietaPowyżej16Poniżej18RokuŻyciaNiezamężna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#MężczyznaPowyżej13Poniżej18RokuŻycia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaCzęściowoUbezwłasnowolniona"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPełnaZdolnośćDoCzynnościPrawnych -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPełnaZdolnośćDoCzynnościPrawnych">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPoniżej13RokuŻycia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPoniżej13RokuŻycia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Małoletni"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaBezZdolnościDoCzynnościPrawnych"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPowyżej18RokuŻycia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPowyżej18RokuŻycia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Pełnoletni"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPrawna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPrawna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:comment>art. 33 KC
+- od powstania (np. wpis do rejestru) do ustania (np. wykreślenie z rejestru)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Pełnoletni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Pełnoletni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PełnoletniNieUbezwłasnowolniony"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PełnoletniUbezwłasnowolniony"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment xml:lang="pl">Osoba fizyczna, która ukończyła 18 lat lub zawarła małżeństwo 
+
+
+art. 10 KC
+Pełnoletni to mężczyzna który ukończył 18 lat.
+
+Pełnoletnia to kobieta, która ukończyła 18 lat. 
+lub 
+Pełnoletnia to kobieta zamężna.
+lub
+Pełnoletnia to kobieta, która ukończyła 16 lat i jest zamężna.
+lub
+Pełnoletnia to kobieta, która ukończyła 16 lat i jest rozwiedziona.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PełnoletniNieUbezwłasnowolniony -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PełnoletniNieUbezwłasnowolniony">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPełnaZdolnośćDoCzynnościPrawnych"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Pełnoletni"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PełnoletniUbezwłasnowolniony"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PełnoletniUbezwłasnowolniony -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PełnoletniUbezwłasnowolniony">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Pełnoletni"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PochodnaRzeczy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PochodnaRzeczy">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RzeczGłówna"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#CzęśćSkładowaRzeczy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Pożytek"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Przynależność"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistny">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiada"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Posiadacz"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczZależny"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistnyWDobrejWierze"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistnyWZłejWierze"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistnyWDobrejWierze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistnyWDobrejWierze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistny"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistnyWZłejWierze"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistnyWZłejWierze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistnyWZłejWierze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PoprzedniPosiadaczSamoistny"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Posiadacz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Posiadacz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#WładającyWeWłasnymImieniu"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiada"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczSamoistny"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczZależny"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#UżytkownikWieczysty"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczNieWłaścicielski -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczNieWłaścicielski">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczZależny"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Posiadacz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczSamoistny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczSamoistny">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczWłaścicielski"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaSamoistnie"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Posiadacz"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaSamoistnie"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczZależny"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczWłaścicielski -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczWłaścicielski">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Posiadacz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczZależny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczZależny">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Posiadacz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoNegatoryjne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoNegatoryjne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoPetytoryjne"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoWindykacyjne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoPetytoryjne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoPetytoryjne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniaInicjowanePrzezWłaściciela"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#InnePowództwoPetytoryjne"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoNegatoryjne"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoWindykacyjne"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoWindykacyjne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoWindykacyjne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PowództwoPetytoryjne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Pożytek -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Pożytek">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PochodnaRzeczy"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Przynależność"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekCywilny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekCywilny">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekRzeczy"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekNaturalny"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekNaturalny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekNaturalny">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekRzeczy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekPrawa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekPrawa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Pożytek"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekRzeczy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekRzeczy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekRzeczy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Pożytek"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekCywilny"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PożytekNaturalny"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Prekarzysta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Prekarzysta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#WładającyWeWłasnymImieniu"/>
+        <rdfs:comment xml:lang="pl">Prekarzysta to osoba, która grzecznościowo lub chwilowo wykonuje dla siebie cudze prawo do władania rzeczą i korzysta z niej w niepełnym (ale określonym) zakresie.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PrzedstawicielUstawowy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzedstawicielUstawowy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadania -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadania">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnego"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnego -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnego">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ObjęcieWPosiadanieSamoistne"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#SamowolneObjęcieWPosiadanieSamoistne"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnegoWDobrejWierze"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnegoWZłejWierze"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnegoWDobrejWierze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnegoWDobrejWierze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnego"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnegoWZłejWierze"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnegoWZłejWierze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnegoWZłejWierze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeniesieniePosiadaniaSamoistnego"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeszkodaPrzemijająca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzeszkodaPrzemijająca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Okres"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Przynależność -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Przynależność">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestWłasnością"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestWłaścicielem"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RzeczGłówna"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PochodnaRzeczy"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Ruchomość"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RzeczGłówna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#RodzicPosiadającyWładzęRodzicielską -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#RodzicPosiadającyWładzęRodzicielską">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzedstawicielUstawowy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#RolnikIndywidualny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#RolnikIndywidualny">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiada"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćRolna"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="pl">Art. 6. 1. Za rolnika indywidualnego uważa się osobę fizyczną będącą właścicielem, użytkownikiem wieczystym, samoistnym posiadaczem lub dzierżawcą nieruchomości rolnych, których łączna powierzchnia użytków rolnych nie przekracza 300 ha, posiadającą kwalifikacje rolnicze oraz co najmniej od 5 lat zamieszkałą w gminie, na obszarze której jest położona jedna z nieruchomości rolnych wchodzących w skład gospodarstwa rolnego i prowadzącą przez ten okres osobiście to gospodarstwo.
+[ustawa z dnia 11 kwietnia 2003 r. o kształtowaniu ustroju rolnego (Dz.U.2016.2052 j.t.)]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#RozpoczęcieBieguZasiedzenia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#RozpoczęcieBieguZasiedzenia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Rozwód -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Rozwód">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RozpoczęcieBieguZasiedzenia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#WznowienieBieguZasiedzenia"/>
+        <rdfs:comment xml:lang="pl">Termin uprawomocnienia orzecznia o rozwodzie.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Rozwódka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Rozwódka">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Kobieta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Ruchomość -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Ruchomość">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#RuchomośćKRUDK"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#RuchomośćSpozaKRUDK"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#RuchomośćKRUDK -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#RuchomośćKRUDK">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Ruchomość"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RuchomośćSpozaKRUDK"/>
+        <rdfs:comment xml:lang="pl">rzecz wpisana do krajowego rejestru utraconych dóbr kultury (za art. 173 § 2 k.c.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#RuchomośćSpozaKRUDK -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#RuchomośćSpozaKRUDK">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Ruchomość"/>
+        <rdfs:comment xml:lang="pl">rzecz NIE wpisana do krajowego rejestru utraconych dóbr kultury (za art. 173 § 2 k.c.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Nieruchomość"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Ruchomość"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#RzeczGłówna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#RzeczGłówna"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#SamowolneObjęcieWPosiadanieSamoistne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#SamowolneObjęcieWPosiadanieSamoistne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ObjęcieWPosiadanieSamoistne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Spadkobierca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Spadkobierca"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#UnieważnienieMałżeństwa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#UnieważnienieMałżeństwa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RozpoczęcieBieguZasiedzenia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#WznowienieBieguZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#UstaleniePrawaWłasności -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#UstaleniePrawaWłasności">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniaInicjowanePrzezWłaściciela"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#UstanieDziałaniaSiłyWyższej -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#UstanieDziałaniaSiłyWyższej">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RozpoczęcieBieguZasiedzenia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#WznowienieBieguZasiedzenia"/>
+        <rdfs:comment xml:lang="pl">Według powszechnie przyjętej tzw. teorii obiektywnej, za siłę wyższą uważa się zdarzenie pochodzące z zewnątrz, które ma charakter nadzwyczajny, a którego skutkom nie można zapobiec nawet przy dołożeniu najwyższego stopnia staranności (A. Wolter, J. Ignatowicz, K. Stefaniuk, Prawo cywilne, 2001, s. 359 i tam powołane orzeczenia SN).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#UstaniePrzyczynyUstanowieniaPrzedstawicielaUstawowego -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#UstaniePrzyczynyUstanowieniaPrzedstawicielaUstawowego">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#UstanieWładzyRodzicelskiej -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#UstanieWładzyRodzicelskiej">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RozpoczęcieBieguZasiedzenia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#WznowienieBieguZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#UstanowieniePrzedstawicielaUstawowego -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#UstanowieniePrzedstawicielaUstawowego">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#UtrataPosiadaniaSamoistnego -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#UtrataPosiadaniaSamoistnego">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniePrzerywająceBiegZasiedzenia"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniaInicjowanePrzezWłaściciela"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#UłomnaOsobaPrawna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#UłomnaOsobaPrawna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+        <rdfs:comment>art.33^1 par. 1 KC
+- od chwili powstania do chwili ustania, którą określają odpowiednie przepisy ustrojowe
+-stosuje się do nich odpowiednio przepisy o osobach prawnych</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Użytkownik -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Użytkownik">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczZależny"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Zastawnik"/>
+        <rdfs:comment xml:lang="pl">Użytkownik to osoba, która ma prawo używania rzeczy i do pobierania jej pożytków</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#UżytkownikWieczysty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#UżytkownikWieczysty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczZależny"/>
+        <rdfs:comment xml:lang="pl">Użytkownik wieczysty to osoba, która na podstawie umowy może z wyłączeniem innych osób korzystać z gruntów Skarbu Państwa lub jednostek samorządu terytorialnego.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#WspólnikSpółkiCywilnej -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#WspólnikSpółkiCywilnej">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PrzedstawicielUstawowy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#WszczęcieMediacji -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#WszczęcieMediacji">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniaInicjowanePrzezWłaściciela"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#WznowienieBieguZasiedzenia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#WznowienieBieguZasiedzenia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#WładającyWCudzymImieniu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#WładającyWCudzymImieniu">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#WładającyWeWłasnymImieniu"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Właściciel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#WładającyWeWłasnymImieniu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#WładającyWeWłasnymImieniu">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Właściciel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Właściciel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Właściciel">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestWłaścicielem"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestWłaścicielem"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="pl">podmiot prawa cywilnego, który posiada prawo własności rzeczy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZaistnieniePodstawyDoCałkowitegoUbezwłasnowolnienia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZaistnieniePodstawyDoCałkowitegoUbezwłasnowolnienia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZakończenieCzynnościProcesowychPrzerywającychBiegZasiedzenia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZakończenieCzynnościProcesowychPrzerywającychBiegZasiedzenia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RozpoczęcieBieguZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZakończenieKurateli -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZakończenieKurateli">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RozpoczęcieBieguZasiedzenia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#WznowienieBieguZasiedzenia"/>
+        <rdfs:comment xml:lang="pl">Zakończenie kurateli nad ubezwałsnowolnionym częściowo.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZakończenieMediacji -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZakończenieMediacji">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RozpoczęcieBieguZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZakończenieOpieki -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZakończenieOpieki">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RozpoczęcieBieguZasiedzenia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#WznowienieBieguZasiedzenia"/>
+        <rdfs:comment xml:lang="pl">Zakończenie opieki nad osobą ubezwłasnowolnioną całkiwicie.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Zasiedzenie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Zasiedzenie">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZasiedzenieWDobrejWierze"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZasiedzenieWZłejWierze"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment xml:lang="pl">nabycie prawa własności przez zasiedzenie</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZasiedzenieWDobrejWierze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZasiedzenieWDobrejWierze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Zasiedzenie"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ZasiedzenieWZłejWierze"/>
+        <rdfs:comment xml:lang="pl">nabycie prawa własności przez zasiedzenie przy dobrej wierze nabywcy</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZasiedzenieWZłejWierze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZasiedzenieWZłejWierze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Zasiedzenie"/>
+        <rdfs:comment xml:lang="pl">nabycie prawa własności przez zasiedzenie przy złej wierze nabywcy</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Zastawnik -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Zastawnik">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczZależny"/>
+        <rdfs:comment xml:lang="pl">Zastawnik to wierzyciel, którego wierzytelność została zabezpieczona.
+(np. będzie to osoba, która udziela pożyczki, a jej spłatę zabezpiecza biorąc pod zastaw samochód dłużnika)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniaInicjowanePrzezWłaściciela -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniaInicjowanePrzezWłaściciela">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniePrzerywająceBiegZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#Zdarzenie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#Zdarzenie">
+        <rdfs:comment xml:lang="pl">zdarzenie w czasoprzestrzeni (za LKIF)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzenieInicjowanePrzezNieWłaściciela -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzenieInicjowanePrzezNieWłaściciela">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzenieNiePrzerywająceBieguZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzenieNiePrzerywająceBieguZasiedzenia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzenieNiePrzerywająceBieguZasiedzenia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniePrzerywająceBiegZasiedzenia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniePrzerywająceBiegZasiedzenia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniePrzerywająceBiegZasiedzenia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Moment"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#UtrataPosiadaniaSamoistnego"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniaInicjowanePrzezWłaściciela"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZmianaCharakteruPosiadania -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZmianaCharakteruPosiadania">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#ZdarzeniaInicjowanePrzezWłaściciela"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#ZłaWiara -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#ZłaWiara">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#KoncepcjaWiary"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/UsucapiONTO#SkarbPaństwa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#SkarbPaństwa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPrawna"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#TemporalDuration">
+        <rdfs:label xml:lang="pl">Upływ czasu</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#TimeZone">
+        <rdfs:label xml:lang="pl">Strefa Czasowa</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestWłaścicielem"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#jestWłaścicielem"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Właściciel"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiada"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćRolna"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#RolnikIndywidualny"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiada"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PodmiotPrawaCywilnego"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#posiadaSamoistnie"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#Rzecz"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/UsucapiONTO#PosiadaczSamoistny"/>
+    </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćBudynkowa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćGruntowa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#NieruchomośćLokalowa"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaFizyczna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#OsobaPrawna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/UsucapiONTO#UłomnaOsobaPrawna"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
